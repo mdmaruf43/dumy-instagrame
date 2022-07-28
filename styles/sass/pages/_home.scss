@@ -1,0 +1,125 @@
+
+.layout__grid {
+	display: grid;
+	gap: 40px;
+	grid-template-columns: 2fr 1.5fr;
+	padding: 0 100px;
+	margin-top: 105px;
+	.left__section {
+		.stroies__section {
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+			padding: 15px 0;
+		}
+		.post__section {
+			margin: 35px 0 35px 0;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+			padding: 8px 0 0 0;
+			.post__header {
+				padding: 0 15px;
+			}
+		}
+		.image__section {
+			margin: 15px 0 0 0;
+		}
+		.content__section {
+			.main__content {
+				padding: 15px;
+				.reaction {
+					padding: 0 0 10px 0;
+					ul {
+						li {
+							margin-right: 15px;
+							cursor: pointer;
+							svg {
+								font-size: 25px;
+							}
+						}
+					}
+					p {
+						cursor: pointer;
+						svg {
+							font-size: 25px;
+						}
+					}
+				}
+				.like {
+					font-size: 14px;
+				}
+				.discreption {
+					font-size: 14px;
+					text-align: justify;
+					padding: 5px 0;
+					a {
+						color: #333;
+						cursor: pointer;
+					}
+				}
+				.all__comments {
+					a {
+						color: #333;
+						font-size: 14px;
+						cursor: pointer;
+					}
+				}
+				.comments {
+					.each__comment {
+						.name {
+							p {
+								font-weight: 500;
+							}
+						}
+						p {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			.write__comment {
+				margin-top: 1px;
+				input {
+					border-radius: 0 !important;
+				}
+				button {
+					position: absolute;
+					top: 5px;
+					right: 10px;
+					background-color: transparent;
+					font-size: 14px;
+					color: rgb(28, 173, 173);
+				}
+			}
+		}
+	}
+	.right__section {
+		.profile__layout {
+			.user__name {
+				color: #333;
+				font-weight: 500;
+			}
+			p {
+				font-size: 14px;
+				color: #777;
+			}
+			.switch__text {
+				cursor: pointer;
+				color: rgb(28, 173, 173);
+			}
+		}
+		.suggestion {
+			padding: 15px 0 0 0;
+			.header {
+				padding-bottom: 20px;
+				p {
+					font-size: 15px;
+					color: #777;
+					a {
+						font-weight: 500;
+						color: #333;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
