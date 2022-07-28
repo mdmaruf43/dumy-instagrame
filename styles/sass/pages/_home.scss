@@ -5,12 +5,26 @@
 	grid-template-columns: 2fr 1.5fr;
 	padding: 0 100px;
 	margin-top: 105px;
+	@include media-break-width(320, 991) {
+		grid-template-columns: 1fr;
+		padding: 0;
+		margin-top: 65px;
+	}
 	.left__section {
 		.stroies__section {
+			background-color: #fff;
 			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 			padding: 15px 0;
+			border-radius: 8px;
+			.each__section {
+				p {
+					font-size: 14px;
+				}
+			}
 		}
 		.post__section {
+			border-radius: 8px;
+			background-color: #fff;
 			margin: 35px 0 35px 0;
 			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 			padding: 8px 0 0 0;
@@ -76,9 +90,6 @@
 			}
 			.write__comment {
 				margin-top: 1px;
-				input {
-					border-radius: 0 !important;
-				}
 				button {
 					position: absolute;
 					top: 5px;
@@ -91,6 +102,9 @@
 		}
 	}
 	.right__section {
+		@include media-break-width(320, 991) {
+			display: none;
+		}
 		.profile__layout {
 			.user__name {
 				color: #333;

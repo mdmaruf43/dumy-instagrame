@@ -5,7 +5,8 @@
 	.mobile__menu--icon {
 		ul {
 			li:not(:last-child) { 
-				margin-right: 12px
+				margin-right: 12px;
+				cursor: pointer;
 			}
 		}
 		svg {
@@ -15,6 +16,11 @@
 	.right__sec {
 		svg {
 			font-size: 30px;
+		}
+	}
+	.navbar-collapse {
+		@include media-break-width(320, 991) {
+			display: none;
 		}
 	}
 }

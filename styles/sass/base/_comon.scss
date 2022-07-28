@@ -173,4 +173,23 @@ input[type="number"] {
     visibility: hidden;
   }
 }
-
+.swiper-button-prev {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50%;
+  background: #fff;
+  &::after {
+    font-size: 14px !important;
+    color: #333;
+  }
+}
+.swiper-button-next {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50%;
+  background: #fff;
+  &::after {
+    font-size: 14px !important;
+    color: #333;
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Form } from "react-bootstrap";
@@ -5,24 +6,106 @@ import { FiHeart } from "react-icons/fi";
 import { AiOutlineComment } from "react-icons/ai";
 import { FiShare2 } from "react-icons/fi";
 import { FiSave } from "react-icons/fi";
+// Import Swiper React components
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const LeftSidebar: React.FC = () => {
     const [showComment, setShowComment] = useState<boolean>(false);
     const [readMore, setReadMore]       = useState<boolean>(false);
 
     return (
-        <div className="left__section">
-            <div className="stroies__section">
-                <div className="text-center each__section">
-                    <Image
-                        src="/assets/images/user.jpg"
-                        alt="user photo"
-                        width={100}
-                        height={100}
-                        style={{ borderRadius: "50%" }}
-                    />
-                    <p>Kathy Morgan</p>
-                </div>
+        <div className="left__section" style={{ overflow: "hidden" }}>
+            <div className="stroies__section" style={{ overflow: "hidden" }}>
+                <Swiper
+                     modules={[Navigation, Scrollbar, A11y]}
+                     spaceBetween={10}
+                     slidesPerView={4}
+                     navigation
+                     pagination={{ clickable: true }}
+                     onSwiper={(swiper) => console.log(swiper)}
+                     onSlideChange={() => console.log('slide change')}
+                >
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="text-center each__section">
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                width={100}
+                                height={100}
+                                style={{ borderRadius: "50%" }}
+                            />
+                            <p>Kathy Morgan</p>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
             <div className="post__section">
                 <div className="post__header d-flex justify-content-between">
@@ -43,13 +126,52 @@ const LeftSidebar: React.FC = () => {
                     </div>
                 </div>
                 <div className="image__section">
-                    <Image
-                        src="/assets/images/user.jpg"
-                        alt="user photo"
-                        layout="responsive"
-                        width={450}
-                        height={450}
-                    />
+                    <Swiper
+                        modules={[Navigation, Scrollbar, A11y]}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                    >
+                        <SwiperSlide>
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                layout="responsive"
+                                width={450}
+                                height={450}
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                layout="responsive"
+                                width={450}
+                                height={450}
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                layout="responsive"
+                                width={450}
+                                height={450}
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                                src="/assets/images/user.jpg"
+                                alt="user photo"
+                                layout="responsive"
+                                width={450}
+                                height={450}
+                            />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
                 <div className="content__section">
                     <div className="main__content">
