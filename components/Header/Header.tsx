@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,6 +10,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Image from "next/image";
 import { Form } from "react-bootstrap";
+import { userData } from "../../services/API/logInUser";
 
 const Header: React.FC = () => {
     const [show, setShow]   = useState(false);
@@ -34,8 +35,8 @@ const Header: React.FC = () => {
                     <li><IoMdNotificationsOutline /></li>
                     <li>
                         <Image
-                            src="/assets/images/user.jpg"
-                            alt="user photo"
+                            src={userData?.photo}
+                            alt={userData?.name}
                             width={30}
                             height={30}
                             style={{ borderRadius: "50%" }}
@@ -95,7 +96,7 @@ const Header: React.FC = () => {
                     </Form>
                 </Nav>
                 <Nav className="right__sec">
-                    <Nav.Link href="#deets">
+                    <Nav.Link>
                         <AiOutlineMessage />
                     </Nav.Link>
                     <Nav.Link href="#memes">
@@ -103,11 +104,12 @@ const Header: React.FC = () => {
                     </Nav.Link>
                     <Nav.Link>
                         <Image
-                            src="/assets/images/user.jpg"
-                            alt="user photo"
+                            src={userData?.photo}
+                            alt={userData?.name}
                             width={30}
                             height={30}
                             style={{ borderRadius: "50%" }}
+                            priority
                         />
                     </Nav.Link>
                 </Nav>

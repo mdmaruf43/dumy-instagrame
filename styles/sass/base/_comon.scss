@@ -193,3 +193,13 @@ input[type="number"] {
     color: #333;
   }
 }
+.liked {
+  svg {
+    fill: red;
+  }
+}
+.saved { 
+  svg {
+    fill: #a7a7a7
+  }
+}
