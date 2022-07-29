@@ -11,6 +11,9 @@ This project simply Instagrame clone. Try to make a simple UI also dynamic the w
 - React Bootstrap
 - React Icon 
 - Sass
+  
+# Live Demo
+> https://dumy-instagrame.vercel.app/
 
 ## Getting Started
 
