@@ -8,6 +8,9 @@ This project simply Instagrame clone. Try to make a simple UI also dynamic the w
 - Typescript
 - Hook 
 - React Swiper Slider
+- React Bootstrap
+- React Icon 
+- Sass
 
 ## Getting Started
 
